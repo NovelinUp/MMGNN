@@ -1,0 +1,1 @@
+from .spmodel import spMMGNN

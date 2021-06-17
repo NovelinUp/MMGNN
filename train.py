@@ -8,7 +8,7 @@ from metrics import eva_SVM, eva_Kmeans
 
 config = tf.ConfigProto(allow_soft_placement=True)
 
-dataset = 'acm'
+dataset = 'imdb'
 checkpt_file = 'pre_trained/{}/spMMGNN.ckpt'.format(dataset)
 # training params
 batch_size = 1
@@ -50,8 +50,8 @@ with tf.Graph().as_default():
                                       name='ftr_in_{}'.format(i))
                        for i in range(len(fea_list))]
         bias_in_list = [tf.sparse_placeholder(dtype=tf.float32) for _ in biases_list]
-        lbl_in = tf.placeholder(dtype=tf.int32, shape=(batch_size, nb_nodes[1], nb_classes), name='lbl_in')
-        msk_in = tf.placeholder(dtype=tf.int32, shape=(batch_size, nb_nodes[1]),name='msk_in')
+        lbl_in = tf.placeholder(dtype=tf.int32, shape=(batch_size, nb_nodes[2], nb_classes), name='lbl_in')
+        msk_in = tf.placeholder(dtype=tf.int32, shape=(batch_size, nb_nodes[2]),name='msk_in')
         attn_drop = tf.placeholder(dtype=tf.float32, shape=(), name='attn_drop')
         ffd_drop = tf.placeholder(dtype=tf.float32, shape=(), name='ffd_drop')
         is_train = tf.placeholder(dtype=tf.bool, shape=(), name='is_train')

@@ -2,8 +2,9 @@
 
 The source code of Multi-type Meta-path Aggregated Graph Network on Heterogeneous Graph.
 
-The source code is based on [HAN](https://github.com/Jhy1993/HAN)
-The data preprocessing code is based on [MAGNN](https://github.com/cynricfu/MAGNN)
+The source code is based on [HAN](https://github.com/Jhy1993/HAN).
+
+The data preprocessing code is based on [MAGNN](https://github.com/cynricfu/MAGNN).
 
 # Dependencies
 - tensorflow 1.14.0
